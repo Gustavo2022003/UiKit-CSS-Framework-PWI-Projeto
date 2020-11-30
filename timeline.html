@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Picreate | Timeline</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpg">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div id="Principal">
+
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-parent"><a href="index.html">Home</a></li>
+                        <li class="uk-active"><a href="timeline.html">Timeline</a></li>
+                        <li class="uk-parent"><a href="challenge.html">Challenges</a></li>
+                        <li class="uk-parent"><a href="about.html">About</a></li>
+                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay">Sign up</button>
+                        <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+                            <div class="uk-offcanvas-bar">
+                                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                <h1>Registrar-se</h1><br/>
+                                <span class="input"></span>
+                                <input type="text" name="name" placeholder="Full name" title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$" />
+                                <span class="input"></span>
+                                <input type="email" name="email" placeholder="Email address" required />
+                                <span id="passwordMeter"></span>
+                                <input type="password" name="password" id="password" placeholder="Password" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+                                <button type="submit" id="register" value="Sign Up" title="Submit form"><span>Sign up</span></button>
+                            </div>
+                        </div>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right">
+                    <div class="js-upload" uk-form-custom>
+                        <input type="file" multiple>
+                        <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                            <span uk-icon="plus"></span>
+                        </button>
+                    </div>
+                    <h1></h1>
+                    <form class="uk-search uk-search-navbar">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Pesquisar">
+                    </form>
+                    <img src="img/profilemain.png" id="profilemain">
+                    <p style="font-size: 20px; margin-left: 10px; margin-right: 10px;"><a id="profile" href="profile.html">Profile</a></p>
+                </div>
+            </nav>
+
+            <div id="principal">
+                <div class="uk-container uk-container-xlarge">
+                    <h1><b>DESTAQUE DA SEMANA</b></h1>
+
+                    <div id="post" class="uk-card uk-card-default uk-child-width-1-2; center" uk-grid>
+                        <div style="border-top-left-radius: 20px; border-top-right-radius: 20px;" class="uk-card-media-left uk-cover-container">
+                            <img src="img/img7.jpeg" alt="" uk-cover>
+                            <canvas width="600" height="600"></canvas>
+                        </div>
+                        <div>
+                            <div class="uk-card-body">
+                                    <h1 class="uk-card-title">Hlavní město Praha, Czechia</h1>
+                                    <p id="profile"><img id="profile" src="img/profile4.jpeg" alt=""><b>@Daniel_Frank</b></p>
+                                    <p>"Short-coated Black Dog Sitting Near Wall Arts"</p>
+                                    <p id="date">Data de envio: 23/01/2017</p>
+                                    <p id="botoes"><a onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 3.2M  <a href="#" uk-icon="commenting"></a> 1.2K <a href="#" uk-icon="bookmark"></a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-inline">
+                                    <img src="img/img4.jpeg" alt="">
+                                    <div class="uk-overlay uk-light uk-position-bottom">
+                                        <p>@Laura_pdm<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 2.1M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img5.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@Jack203<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 1.3M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img6.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@Cinamon_cake<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 5.0M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img8.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@Gustavo_gutirz<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 2.5M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img9.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@John_dx<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 3.4M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img10.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@Deli_45<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 3.2M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img11.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@JuanPablo<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 4.5M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img12.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@Mike<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 1.4M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <img src="img/img13.jpg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p>@Tookapic<a id="heart" onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 10.2M</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <h1></h1>
+        <footer>Gustavo Gutierrez - 1 DS NOVOTEC - 2020 © - ETEC Pedro Ferreira Alves</footer>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Picreate | Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpg">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div id="Principal">
+
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active"><a href="#">Home</a></li>
+                        <li class="uk-parent"><a href="timeline.html">Timeline</a></li>
+                        <li class="uk-parent"><a href="challenge.html">Challenges</a></li>
+                        <li class="uk-parent"><a href="about.html">About</a></li>
+                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay">Sign up</button>
+                        <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+                            <div class="uk-offcanvas-bar">
+                                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                <h1>Registrar-se</h1><br/>
+                                <span class="input"></span>
+                                <input type="text" name="name" placeholder="Full name" title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$" />
+                                <span class="input"></span>
+                                <input type="email" name="email" placeholder="Email address" required />
+                                <span id="passwordMeter"></span>
+                                <input type="password" name="password" id="password" placeholder="Password" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+                                <button type="submit" id="register" value="Sign Up" title="Submit form"><span>Sign up</span></button>
+                            </div>
+                        </div>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right">
+                    <div class="js-upload" uk-form-custom>
+                        <input type="file" multiple>
+                        <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                            <span uk-icon="plus"></span>
+                        </button>
+                    </div>
+                    <h1></h1>
+                    <form class="uk-search uk-search-navbar">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Pesquisar">
+                    </form>
+                    <img src="img/profilemain.png" id="profilemain">
+                    <p style="font-size: 20px; margin-left: 10px; margin-right: 10px;"><a id="profile" href="profile.html">Profile</a></p>
+                </div>
+            </nav>
+
+            <h1>Picreate - A rede social dos artistas.</h1>
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="min-height: 600; max-height: 600; animation: push; autoplay: true">
+
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img id="images" src="img/img1.jpeg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img id="images" src="img/img2.jpeg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img id="images" src="img/img3.jpg" alt="" uk-cover>
+                    </li>
+                </ul>
+            
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            
+            </div>
+
+            <div class="uk-container uk-container-xlarge">
+
+                <h1 style="margin-top: 20px;">Liberte sua criatividade!</h1>
+
+                <div id="post" class="uk-card uk-card-default uk-child-width-1-2" uk-grid>
+                    <div style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" class="uk-card-media-left uk-cover-container">
+                        <img src="img/img4.jpeg" alt="" uk-cover>
+                        <canvas width="600" height="600"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                                <h1 class="uk-card-title">New York</h1>
+                                <p id="profile"><img id="profile" src="img/profile1.jpeg" alt=""><b>@Laura_pdm</b></p>
+                                <p>"Gostei muito de ter visitado Nova Iorque, aproveitei e tirei algumas fotos de lá..."</p>
+                                <p id="date">Data de envio: 20/02/2020</p>
+                                <p id="botoes"><a onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 2.1M <a href="#" uk-icon="commenting"></a> 2.1K <a href="#" uk-icon="bookmark"></a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="post" class="uk-card uk-card-default uk-child-width-1-2" uk-grid>
+                    <div style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" class="uk-card-media-left uk-cover-container">
+                        <img src="img/img5.jpeg" alt="" uk-cover>
+                        <canvas width="600" height="600"></canvas>
+                    </div>
+                    <div>
+                        <div class="uk-card-body">
+                                <h1 class="uk-card-title">Brown Montain, North Caroline</h1>
+                                <p id="profile"><img id="profile" src="img/profile2.jpeg" alt=""><b>@Jack203</b></p>
+                                <p>"Brown Montain - Carolina do Norte - 20/03/17"</p>
+                                <p id="date">Data de envio: 02/06/2017</p>
+                                <p id="botoes"><a onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 1.3M <a href="#" uk-icon="commenting"></a> 1K <a href="#" uk-icon="bookmark"></a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h1>Esteja aonde você quiser em um simples clique.</h1>
+
+                <div id="post" class="uk-card uk-card-default">
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Florence, Italy</h3>
+                        <p id="profile"><img id="profile" src="img/profile3.jpeg" alt=""><b>@Cinamon_cake</b></p>
+                        <p>"Itália foi um países mais lindos que eu visitei e é claro que eu tinha que ter uma lembraça de lá..."</p>
+                        <p id="date">Data de envio: 03/05/2019</p>
+                        <p id="botoes"><a onclick="UIkit.notification({message:'Curtida enviada!', pos: 'bottom-left'})" uk-icon="heart"></a> 5.0M <a href="#" uk-icon="commenting"></a> 3K <a href="#" uk-icon="bookmark"></a></p>
+                    </div>
+                    <div class="uk-card-media-bottom">
+                        <img style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;" src="img/img6.jpeg" alt="">
+                    </div>
+                </div>
+
+                <h1></h1>
+
+            </div>
+
+        </div>
+
+        <footer>Gustavo Gutierrez - 1 DS NOVOTEC - 2020 © - ETEC Pedro Ferreira Alves</footer>
+    </body>
+</html>

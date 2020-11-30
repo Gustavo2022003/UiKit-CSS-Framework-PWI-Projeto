@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Picreate | Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.css"/>
+        <link rel="stylesheet" type="text/css" href="profile.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpg">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div id="Principal">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-parent"><a href="index.html">Home</a></li>
+                        <li class="uk-parent"><a href="timeline.html">Timeline</a></li>
+                        <li class="uk-parent"><a href="challenge.html">Challenges</a></li>
+                        <li class="uk-parent"><a href="about.html">About</a></li>
+                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay">Sign up</button>
+                        <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+                            <div class="uk-offcanvas-bar">
+                                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                <h1>Registrar-se</h1><br/>
+                                <span class="input"></span>
+                                <input type="text" name="name" placeholder="Full name" title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$" />
+                                <span class="input"></span>
+                                <input type="email" name="email" placeholder="Email address" required />
+                                <span id="passwordMeter"></span>
+                                <input type="password" name="password" id="password" placeholder="Password" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+                                <button type="submit" id="register" value="Sign Up" title="Submit form"><span>Sign up</span></button>
+                            </div>
+                        </div>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right">
+                    <div class="js-upload" uk-form-custom>
+                        <input type="file" multiple>
+                        <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                            <span uk-icon="plus"></span>
+                        </button>
+                    </div>
+                    <h1></h1>
+                    <form class="uk-search uk-search-navbar">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Pesquisar">
+                    </form>
+                    <img src="img/profilemain.png" id="profilemain">
+                    <p style="font-size: 20px; margin-left: 10px; margin-right: 10px;"><a id="profile" href="profile.html">Profile</a></p>
+                </div>
+            </nav>
+
+            <div class="uk-container uk-container-xlarge">
+                <div uk-grid>
+                    <div>
+                        <img style="width: 90px; height: 90px;" src="img/profilemain.png">
+                        <span class="uk-text-middle" style="margin-left: 10px;">@Gustavo_gutirz</span>
+                        <span uk-icon="users" style="margin-left: 10px;"></span>
+                        <span class="uk-text-middle">10.5K</span>
+                        <span uk-icon="social" style="margin-left: 10px;"></span>
+                        <span uk-icon="cog" style="margin-left: 10px;"></span>
+                        <span uk-icon="more-vertical" style="margin-left: 10px;"></span>
+                    </div>
+                </div>
+
+                <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-inline">
+                                <img id="posts" src="img/img13.jpeg" alt="">
+                                <div class="uk-overlay uk-light uk-position-bottom">
+                                    <p id="sobre"><a id="heart" uk-icon="heart"></a> 2.1K</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img src="img/img14.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 1.3M</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img src="img/img15.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 5.0K</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img src="img/img17.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 2.5K</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img id="posts" src="img/img16.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 3.4K</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img src="img/img18.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 3.2K</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img src="img/img19.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 4.5K</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img src="img/img20.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 1.4M</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <img src="img/img21.jpeg" alt="">
+                            <div class="uk-overlay uk-light uk-position-bottom">
+                                <p id="sobre"><a id="heart" uk-icon="heart"></a> 10.2K</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <h1></h1>
+        <footer>Gustavo Gutierrez - 1 DS NOVOTEC - 2020 © - ETEC Pedro Ferreira Alves</footer>
+    </body>
+</html>
